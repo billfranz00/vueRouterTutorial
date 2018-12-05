@@ -2,23 +2,24 @@
     <div>
     	<h1>The User Page</h1>
 	    <hr>
-	    <p>Loaded ID: {{ id }}</p>
+	    <!-- <p>Loaded ID: {{ id }}</p> -->
 	    <button @click="topHomePage" class="btn btn-primary">Go To Home</button>
 	    <hr>
-	    <h3>{{ text }}</h3>
+	    <!-- <h3>{{ text }}</h3> -->
+	    <router-view></router-view>
     </div>
 </template>
 
 <script type="text/javascript">
 	export default {
-		props: {
-			id: {
-				type: String
-			},
-			text: {
-				type: String
-			}
-		},
+		// props: {
+		// 	id: {
+		// 		type: String
+		// 	},
+		// 	text: {
+		// 		type: String
+		// 	}
+		// },
 		// data() {
 		// 	return {
 		// 		id: this.$route.params.id
@@ -31,7 +32,8 @@
 		// },
 		methods: {
 			topHomePage() {
-				this.$router.push("/");
+				// this.$router.push("/");
+				this.$router.push({ name: 'home' });
 			}
 		}
 	}
