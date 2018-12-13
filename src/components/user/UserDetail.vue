@@ -33,6 +33,17 @@
                     hash: '#data'
                 }
             }
+        },
+        beforeRouteEnter(to, from, next) {
+            if(true) {
+                // next(vm => {
+                //     vm.link;
+                // });
+                next();
+            }
+            else {
+                next(false);
+            }
         }
     }
 </script>
